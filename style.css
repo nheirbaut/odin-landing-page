@@ -67,12 +67,13 @@ a {
     padding-bottom: 12px;
 }
 
-.hero-text button {
+button {
     font-size: 18px;
     padding: 6px 30px;
     background-color: #3882f6;
     color: #f9faf8;
     border-radius: 8px;
+    border-style: solid;
 }
 
 .hero-image {
@@ -128,8 +129,7 @@ a {
 
 .quote {
     background-color: #e5e7eb;
-    padding-top: 96px;
-    padding-bottom: 96px;
+    padding: 96px 0;
 }
 
 .quote blockquote {
@@ -149,4 +149,31 @@ blockquote cite {
     font-weight: bold;
     display: block;
     text-align: right;
+}
+
+.call-to-action-section {
+    display: flex;
+    padding: 96px 0;
+    justify-content: center;
+}
+
+.call-to-action-container {
+    display: flex;
+    background-color: #3882f6;
+    border-radius: 8px;
+    padding: 48px 120px;
+    width: 1200px;
+    justify-content: space-between;
+}
+
+.call-to-action-text h3 {
+    color: #f9faf8;
+}
+
+.call-to-action-text p {
+    color: #e5e7eb;
+}
+
+.call-to-action-container button {
+    border-color: #f9faf8;
 }

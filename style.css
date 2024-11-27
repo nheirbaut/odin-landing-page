@@ -1,15 +1,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
+:root {
+    --primary-color: #3882f6;
+    --secondary-color: #1f2937;
+    --text-color: #e5e7eb;
+    --background-color: #f9faf8;
+    --font-family: 'Roboto', Helvetica, sans-serif;
+}
+
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: 'Roboto', Helvetica, sans-serif;
     list-style: none;
     text-decoration: none;
 }
 
 body {
+    font-family: var(--font-family);
+    background-color: var(--background-color);
     display: flex;
     flex-direction: column;
 }
@@ -19,33 +28,34 @@ header {
 }
 
 nav {
-    width: 1200px;
+    max-width: 1200px;
     margin: 0 auto;
     padding: 24px 0;
 }
 
 nav ul {
     display: flex;
-    gap: 16px;
+    align-items: center;
 }
 
-a {
+nav a {
     font-size: 18px;
-    color: #e5e7eb;
+    color: var(--text-color);
+    padding: 0 16px;
 }
 
-.logo {
+nav .logo {
     margin-right: auto;
 }
 
-.logo a {
+nav .logo a {
     font-weight: bold;
     font-size: 24px;
 }
 
 .hero-section {
     display: flex;
-    width: 1200px;
+    max-width: 1200px;
     margin: 0 auto;
     padding: 96px 0;
 }
@@ -57,23 +67,28 @@ a {
 
 .hero-text h1 {
     font-size: 48px;
-    color: #f9faf8;
+    color: var(--background-color);
     padding-bottom: 12px;
 }
 
 .hero-text p {
     font-size: 18px;
-    color: #e5e7eb;
+    color: var(--text-color);
     padding-bottom: 12px;
 }
 
 button {
     font-size: 18px;
     padding: 6px 30px;
-    background-color: #3882f6;
-    color: #f9faf8;
+    background-color: var(--primary-color);
+    color: var(--background-color);
     border-radius: 8px;
-    border-style: solid;
+    cursor: pointer;
+
+}
+
+.hero-text button {
+    border-style: unset;
 }
 
 .hero-image {
@@ -83,7 +98,7 @@ button {
 }
 
 .services-section {
-    width: 1024px;
+    max-width: 1024px;
     margin: 0 auto;
 }
 
@@ -91,7 +106,7 @@ button {
     text-align: center;
     padding: 36px 0;
     font-size: 36px;
-    color: #1f2937;
+    color: var(--secondary-color);
     font-weight: 900;
 }
 
@@ -113,8 +128,7 @@ button {
 .service img {
     width: 200px;
     height: 200px;
-
-    border-color: #3882f6;
+    border-color: var(--primary-color);
     border-width: 2px;
     border-radius: 16px;
     border-style: solid;
@@ -128,7 +142,7 @@ button {
 }
 
 .quote {
-    background-color: #e5e7eb;
+    background-color: var(--text-color);
     padding: 96px 0;
 }
 
@@ -136,7 +150,7 @@ button {
     width: 960px;
     font-size: 36px;
     font-style: italic;
-    color: #1f2937;
+    color: var(--secondary-color);
     font-weight: lighter;
     text-align: center;
     margin: auto;
@@ -154,33 +168,34 @@ blockquote cite {
 .call-to-action-section {
     display: flex;
     padding: 96px 0;
-    justify-content: center;
 }
 
 .call-to-action-container {
     display: flex;
-    background-color: #3882f6;
+    background-color: var(--primary-color);
     border-radius: 8px;
     padding: 48px 120px;
     width: 1200px;
+    margin: 0 auto;
     justify-content: space-between;
 }
 
 .call-to-action-text h3 {
-    color: #f9faf8;
+    color: var(--background-color);
 }
 
 .call-to-action-text p {
-    color: #e5e7eb;
+    color: var(--text-color);
 }
 
 .call-to-action-container button {
-    border-color: #f9faf8;
+    border-style: solid;
+    border-color: var(--background-color);
 }
 
 footer {
-    background-color: #1f2937;
-    color: #e5e7eb;
+    background-color: var(--secondary-color);
+    color: var(--text-color);
     text-align: center;
     padding: 32px 0;
 }
